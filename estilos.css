@@ -1,0 +1,105 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@200;300;400;500;600;700;800;900&family=Mooli&family=Raleway:wght@100;200;300;400;500;600;700;800;900&display=swap');
+ /*FLEXBOX*/
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Mooli", sans-serif;
+}
+
+header{
+    display: flex; /*el flex se pone directo al padre de los elementos que queremos acomodar*/ /*sirve para acomodar a los hijos del elemento*/
+    background-color: rgb(166, 231, 231);
+    gap: 10px; /*agrega un espacio entre cada uno de los items-hijos del elemento a modificar*/ /*solamente funciona cuando un elemento tiene display flex*/
+    height: 70px;
+}
+
+.logo{
+    width: 100px;
+}
+.navmenu{
+    display: flex;
+    align-items: center;
+    width: 100%;
+    justify-content: end;
+    padding-right: 30px;
+}
+
+.menu{
+    display: flex;
+    list-style-type: none;
+    gap: 50px;
+    align-items: center;
+    height: 100%;
+}
+
+.menu-item a{
+    color: rgb(16, 123, 158);
+    text-decoration: none;
+}
+
+.menu-item.active a{
+    text-decoration: underline double;
+}
+
+.img-principal{
+    background-image: url("./img/paisaje.jpg");
+    height: 80vh;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    padding-inline: 200px;
+}
+
+.img-principal h2{
+    color: white;
+    background-color: rgba(6, 33, 85, 0.692); /*la ultima seccion es la opacidad*/
+    padding-inline: 15px; /*espacio en la derecha y la izquierda*/
+}
+
+.img-principal p{
+    color: white;
+    text-align: center;
+    background-color: rgba(6, 33, 85, 0.692);;
+
+}
+
+ /*TARJETAS*/
+.tarjetitas{
+    display: flex;
+    padding: 60px;
+    gap: 30px;
+
+}
+
+.tarjetita{
+    background-color:rgb(166, 231, 231);
+    border-radius: 30px;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    flex: 1;
+
+}
+
+.tarjetita-img{
+    max-width: 100%;
+}
+
+.informacion{
+    padding: 0 20px 20px 20px;
+}
+
+.pie{
+    background-color: rgb(166, 231, 231);
+    padding-block:20px ;
+    color: rgb(6, 86, 112);
+    text-align: center;
+    display: flex;
+    justify-content: space-around;
+}
